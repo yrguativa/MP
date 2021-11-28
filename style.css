@@ -6,6 +6,7 @@ body {
     justify-content: center;
     --primary-color: rgba(93, 247, 164, 1);
     --secundary-color: rgba(42, 208, 202, 1);
+    --gray: #4f4f4f;
 }
 
 body {
@@ -13,7 +14,7 @@ body {
     display: grid;
     grid-template-columns: 30% 1fr;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    /* margin: auto; */
+    overflow: hidden;
 }
 
 section {
@@ -52,10 +53,14 @@ section {
 }
 #personal-info h2 {
     text-align: left;
+    color:var(--gray);
+    font-size: 20px;
 }
 #personal-info span {
     display: block;
 }
+
+/* working information  */
 #working-info {
     padding: 30px 30px;
     display: flex;
@@ -69,4 +74,14 @@ section {
 .icon-social-network {
     width: 30px;
     height: 30px;
+}
+
+article p {
+    color: var(--gray);
+    display: flex;
+    flex-direction: column;
+}
+
+#courses h3{
+    color: var(--primary-color)
 }
