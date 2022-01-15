@@ -1,12 +1,15 @@
 html,
 body {
+    --primary-color: #5df7a4;
+    --secundary-color: #2acfca;
+    --gray: #4f4f4f;
+    --cornflower-blue: #6195ed;
+
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
-    --primary-color: rgba(93, 247, 164, 1);
-    --secundary-color: rgba(42, 208, 202, 1);
-    --gray: #4f4f4f;
+    color: var(--gray);
 }
 
 body {
@@ -29,23 +32,37 @@ section {
     padding: 20px 30px;
     text-align: center;
     background: rgb(42, 208, 202);
-    background: linear-gradient(
-        180deg,
-        rgba(42, 208, 202, 1) 0%,
-        rgba(225, 246, 100, 1) 20%,
-        rgba(254, 176, 254, 1) 40%,
-        rgba(171, 179, 252, 1) 60%,
-        rgba(93, 247, 164, 1) 80%,
-        rgba(88, 196, 246, 1) 100%
-    );
-
-    background: linear-gradient(90deg, #00c9ff 0%, #92fe9d 100%);
+    color: white;
+   
+     background: linear-gradient(90deg, #00c9ff 0%, #92fe9d 100%);
 }
 
-#personal-info img {
+#personal-info div:first-child img {
     min-width: 200px;
     max-width: 100%;
     border-radius: 50%;
+    background: linear-gradient(
+        135deg,
+        #2ad0ca 0%,
+        #e1f664 20%,
+        #feb0fe 40%,
+        #abb3fc 60%,
+        #5df7a4 80%,
+        var(--cornflower-blue) 100%
+    );
+
+}
+#personal-info div:first-child img:hover {
+    background: linear-gradient(
+        135deg,
+        var(--cornflower-blue) 0%
+        #2ad0ca 20%,
+        #e1f664 40%,
+        #feb0fe 60%,
+        #abb3fc 80%,
+        #5df7a4 100%,        
+    );
+
 }
 #personal-info p {
     text-align: justify;
@@ -53,23 +70,38 @@ section {
 }
 #personal-info h2 {
     text-align: left;
-    color:var(--gray);
+    color: var(--gray);
     font-size: 20px;
 }
 #personal-info span {
     display: block;
 }
+#social-media img {
+    /*https://codepen.io/sosuke/pen/Pjoqqp*/
+    filter: invert(50%) sepia(95%) saturate(353%) hue-rotate(182deg) brightness(95%) contrast(95%);
+}
 
 /* working information  */
 #working-info {
     padding: 30px 30px;
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     justify-content: space-evenly;
+    overflow: scroll;
+}
+#working-info article h2 {
+    color: var(--secundary-color);
 }
 #working-info article span {
+    align-items: justify;
+}
+#working-info article span:first-child b {
     font-weight: bold;
-    color: var(--secundary-color);
+    color: var(--cornflower-blue);
+}
+#working-info article span:last-child {
+    color: black;
+    font-size: small;
 }
 .icon-social-network {
     width: 30px;
@@ -82,6 +114,6 @@ article p {
     flex-direction: column;
 }
 
-#courses h3{
-    color: var(--primary-color)
+#courses h3 {
+    color: var(--primary-color);
 }
